@@ -10,7 +10,9 @@ For example:
 3   9
 3   3
 
-
+~/personal/advent-of-code-2024/day1 main ❯ cargo run
+Diff: 2367773
+Score: 21271939
 
 */
 use std::fs::File;
@@ -20,7 +22,7 @@ use std::collections::{BinaryHeap, HashMap};
 use std::cmp::Reverse;
 
 fn main() -> Result<(), Box<dyn Error>>{
-    let input_path = "resources/test.txt";
+    let input_path = "resources/input.txt";
     let (vec1, vec2) = read_input(input_path)?;
     let (heap1, heap2) = create_binary_heaps(vec1.clone(), vec2.clone());
     let diff = find_diff_part_1(heap1, heap2);
